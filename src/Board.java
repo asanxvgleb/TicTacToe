@@ -1,10 +1,11 @@
 public class Board {
     private final String[][] board = new String[3][3];
+    private static final String EMPTY_CELL = " ";
 
     public Board() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                board[i][j] = " ";
+                board[i][j] = EMPTY_CELL;
             }
         }
     }
@@ -30,7 +31,6 @@ public class Board {
     public boolean isFull() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                String EMPTY_CELL = " ";
                 if (EMPTY_CELL.equals(board[i][j]))
                     return false;
             }
